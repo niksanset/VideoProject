@@ -1,0 +1,23 @@
+{% extends "app/base.html" %}
+
+{% block title %}Movie{% endblock title %}
+
+
+{% block content %}
+
+<div>
+    <img src="{{media_detail.image.url}}" alt="" style="width: 20%; margin: 1vh;">
+    <h4 style="color: aliceblue;margin: 1vh;">Название: {{media_detail.title}}</h4>
+    <h4 style="color: aliceblue;">Режиссёр: {{media_detail.director}}</h4>
+
+</div>
+
+<video controls style="border-radius: 2vh;">
+  <source src="{{media_detail.video.url}}" type="video/mp4">
+</video>
+
+{% endblock content %}
+
+
+
+

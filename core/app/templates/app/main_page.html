@@ -1,0 +1,50 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+
+{% block title %}Main page{% endblock title %}
+
+
+
+{% block content %}
+
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="max-height: 93.5vh;">
+        <img src="{% static 'app/img/2.jpg' %}" class="d-block w-100" alt="..." style="filter: brightness(30%);">
+        <div class="carousel-caption d-none d-md-block" style="padding-top: 20px;">
+            <img src="{% static 'app/img/4.jpg' %}" alt="" style="width: 35%; height: 10%; border-radius: 5%;">
+            <h5 style="margin-top: 20px;">Бегущий по лезвию 2049</h5>
+            <p>Harrison Ford, Ryan Gosling</p>
+          </div>
+      </div>
+      <div class="carousel-item" style="max-height: 93.5vh;">
+        <img src="{% static 'app/img/1.jpg' %}" class="d-block w-100" alt="..." style="filter: brightness(30%);">
+        <div class="carousel-caption d-none d-md-block">
+            <img src="{% static 'app/img/5.jpg' %}" alt="" style="width: 34%; height: 10%; border-radius: 5%;">
+            <h5 style="margin-top: 20px;">Интерстеллар</h5>
+            <p>Matthew McConaughey, Anne Hathaway</p>
+          </div>
+      </div>
+      <div class="carousel-item" style="max-height: 93.5vh;">
+        <img src="{% static 'app/img/12.jpg' %}" class="d-block w-100" alt="..." style="filter: brightness(30%);">
+        <div class="carousel-caption d-none d-md-block">
+            <img src="{% static 'app/img/6.jpg' %}" alt="" style="width: 35%; height: 10%; border-radius: 5%;">
+            <h5 style="margin-top: 20px;">Ярость</h5>
+            <p>Brad Pitt, Shia LaBeouf</p>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+{% endblock content %}

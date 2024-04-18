@@ -1,0 +1,27 @@
+{% extends "app/base.html" %}
+
+{% block title %}Фильмы{% endblock title %}
+
+{% block content %}
+{% for media in media_list  %}
+<div>
+    <a href="{% url "detail" pk=media.pk %}">
+
+        <div class="card text-bg-dark animate__animated animate__zoomIn animate__slow" style="width: 40vh;margin: 4vh;">
+            <img src="{{media.image.url}}" class="card-img" alt="{{media.image}}" style="width: 40vh;border-radius: 2vh;">
+            <div class="card-img-overlay">
+    
+                    <h5 class="card-title" style="box-shadow: inset 1px 0px 76px -1px rgba(0,0,0,0.75); position: relative;top: 468px;left: -16px;padding: 1vh;border-radius: 1vh;">{{media.title}}</h5>
+                
+            </div>
+          </div>
+    </a>
+
+</div>
+  {% endfor %}
+{% endblock content %}
+
+
+
+
+

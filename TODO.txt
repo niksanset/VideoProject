@@ -1,0 +1,39 @@
+1. Создание сервиса с возможностью просмотра и загрузки видео.
+---
+
+* Администраторы могут загружать видео.
+* Пользователи могут регистрироваться и просматривать видео.
+
+** Genre (Category)
+title: str
+
+** Anime (SubCategory)
+title: str
+description: str
+avatar: str
+genre: M2M
+
+
+** AnimeMedia (Product)
+serial: int
+video: str
+anime: FK
+add_at: str
+
+** Comment
+body: str
+user: FK
+anime: FK
+created_at: str
+is_updated: bool
+
+** Like
+user: FK
+like: bool
+anime_media: FK
+
+
+** Rating
+user: FK
+rating: float
+anime_media: FK
